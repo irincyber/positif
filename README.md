@@ -1,27 +1,26 @@
 Internet Positif
 Menggunakan Bind9 respond policy zone (RPZ)
 
-#Centos 
+Centos 
 nano /etc/named.conf
-#Debian
+Debian
 nano /etc/bind/named.conf.options
 
-#
-#[...]
+[...]
 options {
-#...
+
 response-policy { zone "pornografi"; zone "pengaduan"; zone "kajian"; zone "malware"; };
-#...
-#[...]
+
+[...]
 
 
-# tamahkan zone
-#centos
+tambahkan zone
+centos
 nano /etc/named.conf
-#debian
+debian
 nnao /etc/bind/named.conf.local
 
-#[...]
+[...]
 zone "pornografi" {
         type master;
         file "/home/positif/porno.zone";
@@ -42,5 +41,5 @@ zone "malware" {
         file "/home/positif/malware.zone";
         allow-query {none;};
         };
-#[...]
+[...]
 
